@@ -1,6 +1,10 @@
-import ReactIosAlert from 'components/react-ios-alert';
+import ReactIosModal from 'components/react-ios-modal';
+import IosModal from 'components/ios-modal';
 import IosAlert from 'components/ios-alert';
+import IosConfirm from 'components/ios-confirm';
 export {
-  ReactIosAlert,
-  IosAlert
+  ReactIosModal,
+  IosModal,
+  IosAlert,
+  IosConfirm
 };

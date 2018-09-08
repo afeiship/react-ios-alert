@@ -11,9 +11,21 @@ button{
 @import './components/style.scss';
 
 
-.hello-react-ios-alert{
+.hello-react-ios-modal{
   padding:50px 20px;
 
+  select{
+    width: 80%;
+    height: 44px;
+    margin: 40px auto;
+    display: block;
+    border:2px dashed green;
+    outline: none;
+  }
+
+  strong{
+    color: #f80;
+  }
   .button{
     border: none;
     display: block;

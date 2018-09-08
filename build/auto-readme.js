@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fileRegExp = require('file-regexp');
-const exampleRE = /\/\*===example start===\*\/\n([a-zA-Z\[\].{\s()<="-<_>}?:+0-9\u4e00-\u9eff`!、，。【】|？]*)\/\*===example end===\*\//;
+const exampleRE = /\/\*===example start===\*\/\n([a-zA-Z\[\].{\s()<="-<_>}?:+0-9\u4e00-\u9eff`!、，。【】|？：]*)\/\*===example end===\*\//;
 const templateRE = /\/\*===properties start===\*\/([()\[\]\w\s={}:.;,'"=>\u4E00-\u9FA5-，\/\/%]*)\/\*===properties end===\*\//;
 
 const targetPropsRE = /## properties:\n```javascript\n(.*)\n```/;
@@ -10,7 +10,7 @@ const targetUsageRE = /## usage:\n```jsx\n(.*)\n```/;
 let readmeFile = path.join(__dirname,'../README.md');
 let _readmeFile = path.join(__dirname,'../_README.md');
 let exampleFile = path.join(__dirname,'../src/dev.js');
-let templateFile = path.join(__dirname,'../src/components/react-ios-alert.js');
+let templateFile = path.join(__dirname,'../src/components/react-ios-modal.js');
 
 
 

@@ -10,7 +10,7 @@ import ReactAppendToDocument from 'react-append-to-document';
 export default class extends Component {
   /*===properties start===*/
   static propTypes = {
-    className: PropTypes.string,
+    className: PropTypes.string
   };
 
   static defaultProps = {
@@ -19,7 +19,7 @@ export default class extends Component {
 
   static instance(inProps) {
     return ReactAppendToDocument.append(this, inProps, {
-      className: 'react-ios-alert-container'
+      className: 'react-ios-modal-container'
     });
   }
 
@@ -58,13 +58,13 @@ export default class extends Component {
 
   render() {
     const { className, okText, onClick, ...props } = this.props;
-    const { title, content, items } = this.state;
+    const { type, title, content, items } = this.state;
 
     return (
       <ReactModal
         ref={root => this.root = root}
         onChange={this._onChange}
-        className={classNames('webkit-sassui-ios-modal webkit-sassui-ios-alert react-ios-alert', className)}
+        className={classNames(`webkit-sassui-ios-modal webkit-sassui-ios-${type} react-ios-modal`, className)}
         {...props}
       >
         {title && <header hidden={!title} className="hd">{title}</header>}

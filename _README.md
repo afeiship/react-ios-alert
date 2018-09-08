@@ -1,12 +1,8 @@
-# react-ios-alert
-> React component for ios style alert
+# react-ios-modal
+> React component for ios style modal
 
 ## snapshot:
-<center>
-    <img width="300" src="https://ws4.sinaimg.cn/large/006tNbRwgy1fv1ys1zcnjj30fw0be74w.jpg"/>
-    <img width="300" src="https://ws1.sinaimg.cn/large/006tNbRwgy1fv1ysg5tbqj30gc0a0q3d.jpg"/>
-</center>
-
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fv2lqm2xfng30g70gnqv5.gif)
 
 ## properties:
 ```javascript
@@ -15,19 +11,19 @@ BACKUP_PROPERTIES
 
 ## install && import:
 ```bash
-npm install --save afeiship/react-ios-alert --registry=https://registry.npm.taobao.org
+npm install --save afeiship/react-ios-modal --registry=https://registry.npm.taobao.org
 ```
 
 ```js
-import ReactIosAlert from 'react-ios-alert';
+import { ReactIosModal, IosModal, IosAlert, IosConfirm } from 'react-ios-modal';
 ```
 
 ```scss
 // customize your styles:
-$react-ios-alert-options:(
+$react-ios-modal-options:(
 );
 
-@import 'node_modules/react-ios-alert/dist/style.scss';
+@import 'node_modules/react-ios-modal/dist/style.scss';
 ```
 
 

@@ -1,10 +1,31 @@
-$react-ios-alert-options:(
+$react-ios-modal-options: (
+  width: 75%,
+  min-width: 300px,
+  max-width: 400px
+) !default;
 
-)!default;
+@import "node_modules/react-modal/dist/style.scss";
+@import "node_modules/webkit-sassui-ios-modal/dist/webkit-sassui-ios-modal.scss";
+@import "node_modules/webkit-sassui-ios-alert/dist/webkit-sassui-ios-alert.scss";
+@import "node_modules/webkit-sassui-ios-confirm/dist/webkit-sassui-ios-confirm.scss";
 
-@import 'node_modules/react-modal/dist/style.scss';
-@import 'node_modules/webkit-sassui-ios-alert/dist/webkit-sassui-ios-alert.scss';
+.react-ios-modal {
+  $width: map-get(
+    $map: $react-ios-modal-options,
+    $key: width
+  );
 
-.react-ios-alert{
-  width: 75%;
+  $min-width: map-get(
+    $map: $react-ios-modal-options,
+    $key: min-width
+  );
+
+  $max-width: map-get(
+    $map: $react-ios-modal-options,
+    $key: max-width
+  );
+
+  width: $width;
+  min-width: $min-width;
+  max-width: $max-width;
 }
