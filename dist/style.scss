@@ -1,0 +1,10 @@
+$react-ios-alert-options:(
+
+)!default;
+
+@import 'node_modules/react-modal/dist/style.scss';
+@import 'node_modules/webkit-sassui-ios-alert/dist/webkit-sassui-ios-alert.scss';
+
+.react-ios-alert{
+  width: 75%;
+}
