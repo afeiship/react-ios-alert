@@ -13,9 +13,8 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    window.demo = this;
-    window.refs = this.refs;
-    window.rc = this.refs.rc;
+
+    //1. intial:
     IosAlert.init();
   }
 
