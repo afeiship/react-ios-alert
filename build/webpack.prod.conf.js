@@ -9,8 +9,8 @@ base.entry = {
 base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
-  filename: 'react-ios-alert.js',
-  library: 'ReactIosAlert',
+  filename: 'react-ios-modal.js',
+  library: 'ReactIosModal',
   libraryTarget: 'umd'
 }
 
