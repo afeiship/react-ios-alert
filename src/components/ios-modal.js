@@ -6,7 +6,6 @@ export default class {
   static init(inProps) {
     ReactIosModal.instance(inProps).then(instance => {
       this.instance = this.instance || instance;
-      console.log("get instance.setTimeout..");
     });
   }
 
