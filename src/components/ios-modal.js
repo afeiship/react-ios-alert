@@ -1,17 +1,24 @@
-import ReactIosModal from 'components/react-ios-modal';
+import ReactIosModal from "components/react-ios-modal";
 
 export default class {
-
   static instance;
 
   static init(inProps) {
     ReactIosModal.instance(inProps).then(instance => {
       this.instance = this.instance || instance;
+      console.log("get instance.setTimeout..");
     });
   }
 
   static present(inOptions, inCallback) {
-    this.instance.component.present(inOptions, inCallback);
+    //todo: buggy solution:
+    if (this.instance) {
+      this.instance.component.present(inOptions, inCallback);
+    } else {
+      setTimeout(() => {
+        this.instance.component.present(inOptions, inCallback);
+      });
+    }
   }
 
   static dismiss(inOptions) {
@@ -22,5 +29,4 @@ export default class {
     this.instance.destroy();
     this.instance = null;
   }
-
 }
