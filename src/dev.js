@@ -1,5 +1,5 @@
-import "./dev.scss";
-import { ReactIosModal, IosModal, IosAlert, IosConfirm } from "./main";
+import './dev.scss';
+import { ReactIosModal, IosModal, IosAlert, IosConfirm } from './main';
 
 /*===example start===*/
 
@@ -8,7 +8,7 @@ import { ReactIosModal, IosModal, IosAlert, IosConfirm } from "./main";
 
 class App extends React.Component {
   state = {
-    type: "alert"
+    type: 'alert'
   };
 
   constructor(props) {
@@ -18,38 +18,38 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log("did mount!");
-    IosAlert.present("test", "12324", () => {
-      console.log("present!");
+    console.log('did mount!');
+    IosAlert.present('test', '12324', () => {
+      console.log('present!');
     });
   }
 
-  _onClick1 = e => {
+  _onClick1 = (e) => {
     IosModal.present(
       {
-        title: "升级提示",
+        title: '升级提示',
         type: this.state.type,
         content: (
           <div>
             检测到您的APP还在使用旧版本，
-            <strong style={{ color: "red" }}>是否更新</strong>？
+            <strong style={{ color: 'red' }}>是否更新</strong>？
           </div>
         ),
         items: [
           {
-            label: "不,谢谢",
+            label: '不,谢谢',
             callback: () => {
               IosModal.dismiss();
             }
           },
           {
-            label: "果断升级",
+            label: '果断升级',
             callback: () => {
               IosModal.dismiss();
             }
           },
           {
-            label: "再想想？",
+            label: '再想想？',
             callback: () => {
               IosModal.dismiss();
             }
@@ -57,20 +57,20 @@ class App extends React.Component {
         ]
       },
       () => {
-        console.log("on shown!");
+        console.log('on shown!');
       }
     );
   };
 
-  _onClick2 = e => {
+  _onClick2 = (e) => {
     IosModal.present(
       {
-        title: "升级提示",
+        title: '升级提示',
         type: this.state.type,
-        content: "检测到您的APP还在使用旧版本,是否更新",
+        content: '检测到您的APP还在使用旧版本,是否更新',
         items: [
           {
-            label: "好的",
+            label: '好的',
             callback: () => {
               IosModal.dismiss();
             }
@@ -78,25 +78,25 @@ class App extends React.Component {
         ]
       },
       () => {
-        console.log("shown!");
+        console.log('shown!');
       }
     );
   };
 
-  _onChangeType = e => {
+  _onChangeType = (e) => {
     const { value } = e.target;
     this.setState({ type: value });
   };
 
-  _onClick3 = e => {
-    IosAlert.present("温馨提示", "您确认您的操作？", () => {
-      console.log("您点了确认!");
+  _onClick3 = (e) => {
+    IosAlert.present('温馨提示', '您确认您的操作？', () => {
+      console.log('您点了确认!');
       IosAlert.dismiss();
     });
   };
-  _onClick4 = e => {
-    IosConfirm.present("温馨提示", "您确认您的操作？", res => {
-      console.log("您点了一个操作，Value为：", res);
+  _onClick4 = (e) => {
+    IosConfirm.present('温馨提示', '您确认您的操作？', (res) => {
+      console.log('您点了一个操作，Value为：', res);
       IosConfirm.dismiss();
     });
   };
@@ -105,9 +105,9 @@ class App extends React.Component {
     return (
       <div className="hello-react-ios-modal">
         <h3>
-          {" "}
+          {' '}
           You Selected <strong>{this.state.type} </strong>
-          Style{" "}
+          Style{' '}
         </h3>
         <select value={this.state.type} onChange={this._onChangeType}>
           <option value="alert"> ALERT </option>
@@ -131,4 +131,4 @@ class App extends React.Component {
 }
 /*===example end===*/
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));

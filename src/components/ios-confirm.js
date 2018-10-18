@@ -2,7 +2,6 @@ import IosModal from 'components/ios-modal';
 import noop from 'noop';
 
 export default class {
-
   static present(inTitle, inContent, inCallback) {
     const callback = inCallback || noop;
     const TRUE_CALLBACK = () => callback(true);
@@ -21,11 +20,10 @@ export default class {
           callback: FALSE_CALLBACK
         }
       ]
-    })
+    });
   }
 
   static dismiss(inOptions) {
     IosModal.dismiss(inOptions);
   }
-
 }

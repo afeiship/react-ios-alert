@@ -2,7 +2,6 @@ import IosModal from 'components/ios-modal';
 import noop from 'noop';
 
 export default class {
-
   static present(inTitle, inContent, inCallback) {
     IosModal.present({
       type: 'alert',
@@ -14,11 +13,10 @@ export default class {
           callback: inCallback || noop
         }
       ]
-    })
+    });
   }
 
   static dismiss(inOptions) {
     IosModal.dismiss(inOptions);
   }
-
 }

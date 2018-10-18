@@ -1,10 +1,10 @@
-import ReactIosModal from "components/react-ios-modal";
+import ReactIosModal from 'components/react-ios-modal';
 
 export default class {
   static instance;
 
   static init(inProps) {
-    ReactIosModal.instance(inProps).then(instance => {
+    ReactIosModal.instance(inProps).then((instance) => {
       this.instance = this.instance || instance;
     });
   }
