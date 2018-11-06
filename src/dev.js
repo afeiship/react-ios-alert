@@ -19,9 +19,9 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log('did mount!');
-    IosAlert.present('test', '12324', () => {
-      console.log('present!');
-    });
+    // IosAlert.present('test', '12324', () => {
+    //   console.log('present!');
+    // });
   }
 
   _onClick1 = (e) => {
