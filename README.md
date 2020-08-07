@@ -2,7 +2,7 @@
 > React component for ios style modal
 
 ## snapshot:
-![](https://ws2.sinaimg.cn/large/006tNbRwgy1fv2lqm2xfng30g70gnqv5.gif)
+![](https://tva1.sinaimg.cn/large/006tNbRwgy1fv2lqm2xfng30g70gnqv5.gif)
 
 ## properties:
 ```javascript
